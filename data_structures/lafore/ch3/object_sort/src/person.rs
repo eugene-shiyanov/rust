@@ -5,10 +5,10 @@ pub struct Person {
 }
 
 impl Person {
-    pub fn new(last: String, first: String , age: i32) -> Person {
+    pub fn new(last: &str, first: &str , age: i32) -> Person {
         Person {
-            last_name: last,
-            first_name: first,
+            last_name: String::from(last),
+            first_name: String::from(first),
             age: age
         }
     }
@@ -18,4 +18,12 @@ impl Person {
         print!(", First name: {}", self.first_name);
         println!(", Age: {}", self.age);
     }
+
+    pub fn get_last(&self) -> &str {
+        &self.last_name
+    }
+}
+
+pub struct ArrayInOb {
+
 }
