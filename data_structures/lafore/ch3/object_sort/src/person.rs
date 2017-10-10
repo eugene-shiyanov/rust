@@ -1,14 +1,14 @@
 pub struct Person {
     last_name: String,
     first_name: String,
-    age: i32
+    age: u32
 }
 
 impl Person {
-    pub fn new(last: String, first: String , age: i32) -> Person {
+    pub fn new(last: &str, first: &str , age: u32) -> Person {
         Person {
-            last_name: last,
-            first_name: first,
+            last_name: String::from(last),
+            first_name: String::from(first),
             age: age
         }
     }
@@ -17,5 +17,9 @@ impl Person {
         print!("Last name: {}", self.last_name);
         print!(", First name: {}", self.first_name);
         println!(", Age: {}", self.age);
+    }
+
+    pub fn get_last(&self) -> &str {
+        &self.last_name
     }
 }
