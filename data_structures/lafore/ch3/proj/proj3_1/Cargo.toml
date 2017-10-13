@@ -1,0 +1,6 @@
+[package]
+name = "proj3_1"
+version = "0.1.0"
+authors = ["Yevhen Shyyanov <Yevhen_Shyyanov@epam.com>"]
+
+[dependencies]
