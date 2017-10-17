@@ -53,11 +53,11 @@ impl ArrayIns {
                     dup_count += 1;
                 }
 
-                for i in (out + dup_count + 1)..self.n_elems - 1 {
+                for i in (out + dup_count + 1)..self.n_elems {
                     self.a[i - dup_count] = self.a[i];
                 }
 
-                self.n_elems -= (dup_count - 1);
+                self.n_elems -= dup_count;
             }
 
             out += 1;

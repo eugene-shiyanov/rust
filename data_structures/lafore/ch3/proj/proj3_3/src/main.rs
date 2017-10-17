@@ -9,7 +9,7 @@ fn main() {
     let mut arr = array_ins::ArrayIns::new(max_size);
     let mut rng = rand::thread_rng();
 
-    for i in 0..20 {
+    for _ in 0..20 {
         arr.insert(rng.gen_range(0, 10));
     }
 
