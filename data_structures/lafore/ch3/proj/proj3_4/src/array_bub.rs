@@ -31,17 +31,22 @@ impl ArrayBub {
     }
 
     pub fn odd_even_sort(&mut self) {
+        let mut counter = 0;
+
         loop {
-            let mut change_flag = false;
+            let mut change_flag;
             let even_index = 0;
             change_flag = self.process_arr(even_index);
             let odd_index = 1;
-            change_flag = self.process_arr(odd_index);
+            change_flag = self.process_arr(odd_index) || change_flag;
+            counter += 1;
 
             if !change_flag {
                 break;
             }
         }
+
+        println!("double processing was performed {} times", counter);
     }
 
     fn process_arr(&mut self, mut index: usize) -> bool {
