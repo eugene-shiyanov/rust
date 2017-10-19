@@ -1,0 +1,7 @@
+[package]
+name = "proj3_6"
+version = "0.1.0"
+authors = ["Eughene Shiyanov <eugene.shiyanov@gmail.com>"]
+
+[dependencies]
+rand = "0.3"
