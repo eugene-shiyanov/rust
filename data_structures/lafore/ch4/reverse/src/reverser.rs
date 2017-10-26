@@ -13,16 +13,16 @@ impl Reverser {
 
     pub fn do_rev(&self) -> String {
         let chars: Vec<char> = self.input.chars().collect();
-        let mut stackX = StackX::new(chars.len());
+        let mut stack = StackX::new(chars.len());
 
         for ch in chars {
-            stackX.push(ch);
+            stack.push(ch);
         }
 
         let mut output = String::new();
 
-        while !stackX.is_empty() {
-            output.push(stackX.pop());
+        while !stack.is_empty() {
+            output.push(stack.pop());
         }
 
         output
